@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Bhim Prasad Bhandari Fight Spino-Cerebellaar Ataxia Disease | Donate Now</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Vibrant Color Scheme */
+        :root {
+            --primary: #4361ee;
+            --primary-light: #4895ef;
+            --secondary: #3f37c9;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f8961e;
+            --text: #2b2d42;
+            --text-light: #8d99ae;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Animated Gradient Header */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: gradientBG 15s ease infinite;
+            background-size: 400% 400%;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        /* Floating CTA Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 20px rgba(247, 37, 133, 0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .floating-cta:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(247, 37, 133, 0.4);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(247, 37, 133, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(247, 37, 133, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(247, 37, 133, 0); }
+        }
+        
+        /* Modern Navigation */
+        nav {
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo i {
+            color: var(--accent);
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            font-weight: 600;
+            color: var(--text);
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        h2 i {
+            color: var(--accent);
+        }
+        
+        /* Video Section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Animated Progress Bar */
+        .progress-section {
+            background: linear-gradient(135deg, var(--primary-light), var(--success));
+            color: white;
+        }
+        
+        .progress-section h2 {
+            color: white;
+        }
+        
+        .progress-container {
+            margin: 2rem 0;
+        }
+        
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .progress-bar {
+            height: 12px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: white;
+            width: 0;
+            border-radius: 6px;
+            position: relative;
+            animation: progressAnimation 2s ease-out forwards;
+        }
+        
+        @keyframes progressAnimation {
+            from { width: 0; }
+            to { width: 35%; } /* Update this to actual percentage */
+        }
+        
+        /* Donation Cards */
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .donation-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .donation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--accent);
+        }
+        
+        .donation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .donation-card h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .donation-card h3 i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .qr-container {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 8px;
+        }
+        
+        .qr-code {
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Updates Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 7px;
+            height: 100%;
+            width: 2px;
+            background: var(--primary-light);
+        }
+        
+        .update {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+        
+        .update::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid white;
+            box-shadow: 0 0 0 3px var(--accent);
+        }
+        
+        .update h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .update-date {
+            display: inline-block;
+            background: var(--primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .contact-card h4 i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 1rem 2rem;
+            position: relative;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-light);
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-links a i {
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+                transition: left 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hero {
+                padding: 2rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .donation-card {
+                padding: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Help Bhim Fight Rare Spino-Cerebellaar Ataxia</h1>
+            <p>Your donation can save a life. Support Bhim Prasad's treatment today.</p>
+            <a href="#donate" class="btn" style="display: inline-block; background: white; color: var(--primary); padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s;">Donate Now</a>
+        </div>
+    </section>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fas fa-hand-holding-medical"></i> Help Bhim</a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> Bhim's Story</a></li>
+                <li><a href="#donate"><i class="fas fa-donate"></i> Donate</a></li>
+                <li><a href="#updates"><i class="fas fa-calendar-alt"></i> Updates</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home">
+            <h2><i class="fas fa-heartbeat"></i> Urgent Medical Need</h2>
+            <p>Bhim Prasad Bhandari, a 47-year-old from Shyanjha, Nepal, is battling a rare autoimmune  Spino-Cerebellaar Ataxia disease <strong> </strong>. This condition causes severe neurological symptoms and requires specialized treatment available only in Kathmandu.</p>
+            
+            <div class="video-container">
+                <!-- Replace with your actual YouTube embed code -->
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <h2><i class="fas fa-chart-line"></i> Fundraising Progress</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 1.5rem;">We've raised 35% of our goal to cover Bhim's treatment costs.</p>
+            
+            <div class="progress-container">
+                <div class="progress-stats">
+                    <span>Nrs. 49,00,000 Raised</span>
+                    <span>Goal: nrs. 1,200,000</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 35%;"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Donation Section -->
+        <section id="donate">
+            <h2><i class="fas fa-hand-holding-heart"></i> How to Donate</h2>
+            <p>Choose the most convenient way to support Bhim's treatment:</p>
+            
+            <div class="donation-grid">
+                <!-- Bank Transfer Card -->
+                <div class="donation-card">
+                    <h3><i class="fas fa-university"></i> Bank Transfer</h3>
+                    <div class="bank-details">
+                        <p><strong>Account Name:</strong> Bhim Prasad Bhandari Medical Fund</p>
+                        <p><strong>Bank:</strong> Nabil Bank LTD.</p>
+                        <p><strong>Account No:</strong> 1234567890123456</p>
+                        <p><strong>Branch:</strong> New Baneshwor, Kathmandu</p>
+                        <p><strong>SWIFT Code:</strong> NARBNPKA</p>
+                    </div>
+                </div>
+                
+                <!-- QR Code Card -->
+                <div class="donation-card">
+                    <h3><i class="fas fa-mobile-alt"></i> Scan QR Code</h3>
+                    <div class="qr-container">
+                        <!-- Replace with your QR code image -->
+                        <img src="ajay-qr-donation.png" alt="Scan to Donate" class="qr-code">
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem;">Scan with your mobile banking app to donate instantly</p>
+                </div>
+                
+                <!-- Mobile Payment Card -->
+                <div class="donation-card">
+                    <h3><i class="fas fa-wallet"></i> Mobile Payment</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <p><strong><i class="fas fa-money-bill-wave"></i> eSewa:</strong> 9841XXXXXX</p>
+                        <p><strong><i class="fas fa-mobile"></i> Khalti:</strong> 9841XXXXXX</p>
+                        <p><strong><i class="fab fa-paypal"></i> PayPal:</strong> helpajay@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2><i class="fas fa-book-open"></i> Bhim's Story</h2>
+            <p>Bhim was a healthy young man working as a school teacher in Shyanjha when he suddenly developed severe .................. in early 2023. After months of tests, he was diagnosed with.............. at National Neouro Center in Kathmandu.</p>
+            
+            <p>This rare autoimmune disorder causes the body to attack NMDA receptors in the brain, leading to:</p>
+            <ul style="margin: 1rem 0 1.5rem 2rem;">
+                <li>Psychiatric symptoms (agitation, hallucinations)</li>
+                <li>Memory deficits</li>
+                <li>Seizures</li>
+                <li>Movement disorders</li>
+                <li>Autonomic dysfunction</li>
+            </ul>
+            
+            <p>Treatment requires ..................... Bhim's family has exhausted their savings and needs your help to continue his life-saving treatment.</p>
+            
+            <h3 style="margin-top: 2rem;"><i class="fas fa-file-medical"></i> Medical Documentation</h3>
+            <div class="gallery">
+                <!-- Replace with actual medical documents (blur sensitive info) -->
+                <div class="gallery-item">
+                    <img src="diagnosis-report.jpg" alt="Diagnosis Report">
+                </div>
+                <div class="gallery-item">
+                    <img src="hospital-bill.jpg" alt="Hospital Bill">
+                </div>
+                <div class="gallery-item">
+                    <img src="treatment-plan.jpg" alt="Treatment Plan">
+                </div>
+                <div class="gallery-item">
+                    <img src="doctor-letter.jpg" alt="Doctor's Letter">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Updates Section -->
+        <section id="updates">
+            <h2><i class="fas fa-calendar-check"></i> Treatment Updates</h2>
+            <p>Follow Bhim's treatment journey and see how your donations are helping:</p>
+            
+            <div class="timeline">
+                <div class="update">
+                    <span class="update-date">July 30, 2023</span>
+                    <h3>Positive Response to Treatment</h3>
+                    <p>Bhim has shown improved responsiveness after the third round of immunotherapy. Doctors report decreased antibody levels in his latest spinal fluid analysis.</p>
+                </div>
+                
+                <div class="update">
+                    <span class="update-date">July 15, 2023</span>
+                    <h3>Funds Disbursed for Medications</h3>
+                    <p>Your donations have covered the latest round of ........ (Nrs. 000,000) and hospital monitoring costs.</p>
+                </div>
+                
+                <div class="update">
+                    <span class="update-date">June 28, 2023</span>
+                    <h3>......... Completed</h3>
+                    <p>Bhim ...............................................</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2><i class="fas fa-envelope-open-text"></i> Contact & Verification</h2>
+            <p>For more information or to verify this campaign, please contact:</p>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h4><i class="fas fa-user"></i> Family Contact</h4>
+                    <p><strong>Chandi Prasad Bhandari</strong> (Father)</p>
+                    <p><i class="fas fa-phone"></i> +977 9768849700</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4><i class="fas fa-hospital"></i> Treating Hospital</h4>
+                    <p><strong>national Neouro Center </strong></p>
+                    <p><i class="fas fa-map-marker-alt"></i>i>    Kathmandu</p>
+                    <p><i class="fas fa-phone"></i> +977 1-4720502</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4><i class="fas fa-user-md"></i> Primary Doctor</h4>
+                    <p><strong>Dr. Lekhjung Thapa</strong></p>
+                    <p>Neurologist</p>
+                    <p><i class="fas fa-phone"></i> +977 9841XXXXXX</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About This Campaign</h3>
+                <p>This fundraiser is organized by Bhim's friends and family to cover his medical expenses. All funds go directly to treatment costs at Grande International Hospital.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> Ajay's Story</a></li>
+                    <li><a href="#donate"><i class="fas fa-chevron-right"></i> Donate Now</a></li>
+                    <li><a href="#updates"><i class="fas fa-chevron-right"></i> Treatment Updates</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Donation Methods</h3>
+                <ul class="footer-links">
+                    <li><a href="#donate"><i class="fas fa-chevron-right"></i> Bank Transfer</a></li>
+                    <li><a href="#donate"><i class="fas fa-chevron-right"></i> QR Code Payment</a></li>
+                    <li><a href="#donate"><i class="fas fa-chevron-right"></i> eSewa/Khalti</a></li>
+                    <li><a href="#donate"><i class="fas fa-chevron-right"></i> PayPal</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Bhim Prasad Bhandari. All donations go directly .</p>
+        </div>
+    </footer>
+    
+    <!-- Floating Donate Button -->
+    <a href="#donate" class="floating-cta">
+        <i class="fas fa-donate"></i>
+    </a>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Animate progress bar on scroll
+        const progressSection = document.querySelector('.progress-section');
+        const progressFill = document.querySelector('.progress-fill');
+        
+        const animateProgress = () => {
+            const sectionPosition = progressSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (sectionPosition < screenPosition) {
+                progressFill.style.width = '35%'; // Update to actual percentage
+            }
+        };
+        
+        window.addEventListener('scroll', animateProgress);
+        
+        // Initialize - trigger progress animation if already in view
+        animateProgress();
+    </script>
+</body>
+</html>
